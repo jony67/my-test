@@ -3,7 +3,9 @@
 ### Используемые технологии и компоненты
 #### - Система тестирования: WEB-сервер Apache, базы данных (MySQL для Windows, MariaDB для Linux), PHP, JavaScript;
 #### - Система управления и анализа:
-##### 1) PHP.
+##### 1) PHP:
+- PHP-библиотека FastJSON JSON-кодировщика/декодировщика	[http://pear.php.net/pepr/pepr-proposal-show.php?id=198]
+Copyright (c) 2006 - 2007 Andrea Giammarchi
 ##### 2) JavaScript
  - библиотека JQuery (Ajax-запросы),
  - D3.js
