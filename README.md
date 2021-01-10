@@ -7,12 +7,17 @@
 - PHP-библиотека FastJSON JSON-кодировщика/декодировщика	[http://pear.php.net/pepr/pepr-proposal-show.php?id=198]
 Copyright (c) 2006 - 2007 Andrea Giammarchi
 ##### 2) JavaScript
- - библиотека JQuery (Ajax-запросы),
- - D3.js
-### * апв
-***
-Скрипт получает сведения о текущей погоде для выбранного города или местоположения, сохраняет в файл как объект JSON для дальнейшего использования и выводит необходимую информацию в окно консоли. Те же действия осуществляются при вызове API "One Call" с полной информацией и прогнозом. 
-### Доступные URL API для текущей погоды (Current weather API):
+ - библиотека JQuery с использованием Ajax-запросов,
+ - D3.js для построения диаграм.
+#### 3) Python: для создания в БД таблицы тестов из файла Excel.
+#### 4) Протестировано в среде:
+- Windows 7 x64 Ultimate,
+- Laragon Full 4.0.16 190914,
+- php-7.2.19-Win32-VC15-x64,
+- Apache httpd-2.4.35-win64VC15,
+- MySQL mysql-5.7.24-winx64
+*** 
+### Описание
 1. По городу:
 * 'api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}'
 * 'api.openweathermap.org/data/2.5/weather?q={city name},{state code}&appid={API key}'
