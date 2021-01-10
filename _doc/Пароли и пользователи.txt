@@ -1,0 +1,50 @@
+Пользователь теста: 
+
+SET @username = 'user1'; /* пользователь */
+SET @pswd = 'paswd!'; /* пароль */
+
+
+Онлайн-сервис (md5): https://snipp.ru/tools/md5
+
+12345		- 827ccb0eea8a706c4c34a16891f84e7b (Иванов В.Е.)
+mypass		- a029d0df84eb5549c641e04a9ef389e5 (Петров Н.А.)
+passtest	- 2f3bc18c0d3e6b1b8a445075535d26e9 (Сидоров В.А.)
+
+
+Конфигурация (Laragon Full 4.0.16 190914):
+- php-7.2.19-Win32-VC15-x64,
+- Apache httpd-2.4.35-win64VC15,
+- MySQL mysql-5.7.24-winx64
+
+Проблемы и их решения:
+
+1. При использовании PHP-7.4 и выше модуль управления тестом выдает предупреждение:
+Deprecated: Array and string offset access syntax with curly braces is deprecated in
+[путь_к_домашнему_каталогу]\test\class\FastJSON.class.php.
+
+Решение:
+а) Использовать PHP-7.2 и ниже.
+или:
+б) Переписать модуль FastJSON.class.php, заменив {} на [], например:
+switch($encode{$pos}) заменить на switch($encode[$pos]).
+
+2. При тестировании на локальной машине модуль управления тестом выдает ошибку:
+Warning: mysqli::__construct(): (HY000/2002), ссылаясь на
+[путь_к_домашнему_каталогу]\test\sec_mod\security_mod.php on line 5.
+
+Решение:
+Вместо адреса типа http://localhost/mytest/test/control.php использовать:
+http://127.0.0.1/mytest/test/control.php
+
+3. При использовании виртуальных хостов при попытке авторизоваться выскакивает ошибка.
+
+Решение:
+в файле main.php отредактировать ссылку:
+
+$LoginScript=$_SERVER['HTTP_HOST']."/test/login.php";
+
+заменить на:
+
+$LoginScript=$_SERVER['HTTP_HOST']."/mytest/test/login.php";
+
+где "mytest" - имя виртуального теста.

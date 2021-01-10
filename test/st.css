@@ -1,0 +1,36 @@
+.tip {
+	display: none;
+	position: absolute;
+	z-index: 9998;
+	top: 0;
+	left: 100%;
+	background: #ededed;
+	text-align: left;
+	color: #000;
+	cursor: default;
+	padding: 5px;
+	margin:  -15px 0 0 10px;
+	width: 200px;
+	/*min-height: 50px;*/
+	height: auto;
+}
+
+.tip-block{
+	display: inline-block;
+	position: relative;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 0;
+	width: 1px;
+}
+
+.fio_inp{
+	position: relative;
+	display: inline-block;
+}
+
+.fio_inp:focus + .tip-block .tip {
+	display: block;
+}
