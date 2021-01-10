@@ -18,7 +18,7 @@ Copyright (c) 2006 - 2007 Andrea Giammarchi
 - MySQL mysql-5.7.24-winx64
 *** 
 ## Описание
-
+![Пример работы](/_jpg/1.jpg)
 
 
 
